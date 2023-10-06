@@ -1,0 +1,23 @@
+create an angular app using angular-cli to print util page team name tema members name and clg logo 
+
+-->to install angular in device
+   npm install -g @angular/cli
+
+-->ng executables are stored at appdata roaming
+
+-->the process of sending data from controller(component.js) to html file is known as interpolation
+
+-->Unlike Reactjs Angularjs has two way binding, the data can be send back and forth btw controller and html
+
+-->to create a component 
+   ng generate component <name>
+   ng g c <name>
+
+-->there is no need for seperate html , css files ; we can write html, css in component.ts file
+
+-->when creating a component manually , we should declare component in declarations in app.modules.ts file
+
+-->class binding:
+   the process of changing styles of elements using class name by controller
+   [class]=<var-name> indicates it a angular feature 
+   var-name contain class name of css style
