@@ -3,8 +3,8 @@ import {Component, ViewChild} from "@angular/core"
 @Component({
     selector:'app-example',
      template:`<h1>Hello Inline Template<h1>
-          <div [class]="color" (mouseover)="Change()">Click Me</div>  
-               <div [class]="color" (click)="Change()">Click Me</div> 
+          <div [class]="c1" (mouseover)="Change()">Click Me</div>  
+               <div [class]="c1" (click)="Change()">Click Me</div> 
                <input type='text' #v >
                <button (click)="set()"></button>  `,
     styles:[`h1{
@@ -27,12 +27,12 @@ import {Component, ViewChild} from "@angular/core"
 export class ExampleComponent{
 
     @ViewChild('v') inp: any |undefined;
-    color='hello'
+    c1='hello'
     Change(){
-        if (this.color=='bye'){
-            this.color='hello'
+        if (this.c1=='bye'){
+            this.c1='hello'
         }else{
-            this.color='bye'
+            this.c1='bye'
         }
     }   
     set(){

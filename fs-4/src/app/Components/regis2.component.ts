@@ -32,7 +32,6 @@ import { Component } from "@angular/core";
                             <label for='pass' >Password : </label>
                             <input type="password" class="form-control" #pass/>
                         </div>
-
                     </form>
                 </div>
                 <div class="card-footer text-center">
@@ -45,7 +44,7 @@ import { Component } from "@angular/core";
     `
 })
 
-export class Route2Component{
+export class Regis2Component{
     display(...a:any){
         for (let i of a) {
             console.log(i.value)

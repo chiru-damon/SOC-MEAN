@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { SignUpForm } from "../Models/SignUpForm.model";
 
 @Component({
     styleUrls:[],
@@ -11,26 +12,29 @@ import { Component } from "@angular/core";
                     Registration Form
                 </div>
                 <form #SignUpForm="ngForm">
+                    {{SignUpForm.value |json}}
+                    <br/>
+                    {{signup | json}}
                     <div class="card-body">
                         <div class="form-group">
                             <label for='name' >Name : </label>
-                            <input type="text" class="form-control"ngModel name='name'/>
+                            <input type="text" class="form-control" [(ngModel)]="signup.name" name='name'/>
                         </div>
                         <div class="form-group">
-                            <label for='roll' >Roll num : </label>
-                            <input type="text" class="form-control"ngModel name='roll'/>
+                            <label for='username' >Roll num : </label>
+                            <input type="text" class="form-control" [(ngModel)]="signup.user" name='user'/>
                         </div>
                         <div class="form-group">
                             <label for='phone' >Phone num : </label>
-                            <input type="text" class="form-control"ngModel name='phone'/>
+                            <input type="tel" class="form-control"[(ngModel)]="signup.phone" name='phone'/>
                         </div>
                         <div class="form-group">                    
                             <label for='mail' >Email : </label>
-                            <input type="mail" class="form-control"ngModel name='mail'/>
+                            <input type="mail" class="form-control"[(ngModel)]="signup.mail" name='mail'/>
                         </div>
                         <div class="form-group">                    
                             <label for='pass' >Password : </label>
-                            <input type="password" class="form-control"ngModel name='pass'/>
+                            <input type="password" class="form-control"[(ngModel)]="signup.pass" name='pass'/>
                         </div>
                     </div>
                     <div class="card-footer text-center">
@@ -39,12 +43,10 @@ import { Component } from "@angular/core";
                 </form>
             </div>
         </div>
-       
     </div>
     `
 })
 
-export class Route3Component{
-    
-
+export class RegisComponent{
+    signup = new SignUpForm("","","","","")
 }

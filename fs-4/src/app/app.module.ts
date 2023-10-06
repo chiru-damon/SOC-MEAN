@@ -4,20 +4,22 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { Route1Component } from './Components/route1.component';
-import { Route2Component } from './Components/route2.component';
+import { Regis2Component } from './Components/regis2.component';
 import { HomeComponent } from './Components/home.component';
 import { SuccessComponent } from './Components/success.component';
 import { FormsModule } from '@angular/forms';
-import { Route3Component } from './Components/route3.component';
+import { RegisComponent } from './Components/regis.component';
+import { LoginComponent } from './Components/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     Route1Component,
-    Route2Component,
-    Route3Component,
+    Regis2Component,
+    RegisComponent,
     HomeComponent,
-    SuccessComponent
+    SuccessComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
